@@ -3,15 +3,14 @@ class Person:
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
-        
-    def full_name(self):
-        return self.first_name + " " + self.last_name
+# returns Full name of person and email      
+    def full_name(self): 
+        return  self.first_name + (" ") + self.last_name
         
     def __str__(self):
-        return self.full_name() + " " + self.email
-    
+        return self.full_name() + (" ") + ("Email") + (" ") + self.email
 
-
+  
 
 class Teacher(Person):
     def __init__(self, first_name, last_name, email, employee_number, room_number, subject_taught,
@@ -21,16 +20,23 @@ class Teacher(Person):
         self.room_number = room_number
         self.subject_taught = subject_taught
         self.years_taught = years_taught
-        
+#retuns employee number      
     def __str__(self):
-        return super().__str__() + " " + str(self.employee_number)
-
+        return super().__str__() + (" ") + ("Employee Number") +str(self.employee_number) + (" ")\
+            + ("Room Number") + (" ") + str(self.room_number) + (" ")\
+            + ("Subject Taught") +(" ") + str(self.subject_taught) + (" ")\
+            + ("Years Teaching") +(" ") + str(self.years_taught) +(" ")
+    
+    
 class Student(Person):
     def __init__(self, first_name, last_name, email, age, grade):
         super().__init__(first_name, last_name, email)
         self.age = age
         self.grade = grade
-
+#returns age
+    def __str__(self):
+        return super().__str__() + (" ") + ("Age") + (" ") + str(self.age) +(" ")\
+            + ("Grade") + str(self.grade) 
 
 class Faculty(Person):
     has_access = True
@@ -39,8 +45,10 @@ class Faculty(Person):
         super().__init__(first_name, last_name, email)
         self.employee_number = employee_number
         self.years_worked = years_worked
-        
-
+#returns employee number
+    def __str__(self):
+        return super().__str__() + (" ") + ("Employee Number") + str(self.employee_number) + (" ")\
+            +("Years Worked") + str(self.years_worked)
 
 
 teacherList = [
@@ -67,7 +75,7 @@ facultyList = [
     ("John", "Jameson",  "jjameson@school.com", "F002", 2),
     ("Peter", "Hendricks",  "phendricks@school.com", "F003", 1)
 ]
-
+#creates dictionary of people
 people = {}
 
 teachers = []
@@ -99,7 +107,7 @@ def find_person_by_last_name_and_role(last_name, role):
         if person.last_name == last_name:
             return person
             
-            
+# takes in information        
 role = input('Enter role: ')
 last_name = input('Enter last name: ').title()
 print(find_person_by_last_name_and_role(last_name, role))
