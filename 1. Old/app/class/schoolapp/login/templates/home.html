@@ -1,0 +1,32 @@
+{% extends "layout.html"%}{% load static %}{% block content %}
+
+
+<div>
+    <div class="google">
+        <a href="/" id="google_logo"><img src="{% static 'logo/Dream.png' %}" alt="google logo image"></a>
+    </div>
+
+    <form action="" id="aform">
+        <div class="row">
+            <label for="lname" id="alabel">Last Name:</label>
+            <input type="text" name="lname" id="ainput">
+        </div>
+        <br>
+        <div class="row">
+            <label for="email" id="alabel">Email:</label>
+            <input type="text" name="email" id="ainput">
+        </div>
+        <br>
+        <div class="row">
+            <label for="room" id="alabel">Room Number:</label>
+            <input type="text" name="room" id="ainput">
+        </div>
+        <br>
+        <div class="row">
+            <label for="subject" id="alabel">Subject:</label>
+            <input type="text" name="subject" id="ainput">
+        </div>
+        <input type="submit" value="Search" id="advanced">
+    </form>
+</div>
+{% endblock content %}

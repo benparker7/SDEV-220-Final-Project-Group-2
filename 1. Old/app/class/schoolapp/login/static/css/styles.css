@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+
+/* NAV BAR */
+
+#nav_bar {
+    float: right;
+}
+
+#nav_bar li {
+    display: inline-block;
+    padding: 8px;
+}
+
+#nav_bar #sign_in {
+    background: #4887ef;
+    margin-right: 25px;
+    padding: 7px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.nav-links {
+    color: #404040;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* GOOGLE AREA */
+
+.google #google_logo {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    clear: both;
+    padding-top: 112px;
+    padding-bottom: 20px;
+}
+
+.form {
+    text-align: center;
+}
+
+#form-search {
+    width: 450px;
+    line-height: 32px;
+    padding: 20px 10px;
+    border-radius: 25px;
+}
+
+.form #form-search {
+    padding: 0 8px;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 300px;
+    padding: 15px 32px;
+    font-size: 16px;
+}
+
+#im_feeling_lucky {
+    background-color: #4887ef;
+}
+
+#im_feeling_lucky:hover {
+    background-color: paleturquoise;
+    color: black;
+}
+
+
+/* Advanced Search */
+
+#advanced {
+    margin-top: 10px;
+    background-color: #4887ef;
+    color: white;
+    /* margin-left: 3px; */
+}
+
+label {
+    display: block;
+    margin-right: 8px;
+    margin-left: 10px;
+}
+
+#aform {
+    margin-left: 10px;
+    display: table;
+}
+
+.row {
+    margin-left: 10px;
+    display: table-row;
+}
+
+#alabel {
+    margin-left: 10px;
+    display: table-cell;
+}
+
+#ainput {
+    margin-left: 10px;
+    display: table-cell;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 400px) {
+    li.nav-links a {
+        display: none;
+    }
+    #google_logo {
+        padding: 0;
+    }
+    .buttons {
+        display: none;
+    }
+    #form-search {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    li.nav-links a {
+        display: none;
+    }
+    #google_logo {
+        padding: 0;
+    }
+    .buttons {
+        display: none;
+    }
+    #form-search {
+        width: 80%;
+    }
+}
