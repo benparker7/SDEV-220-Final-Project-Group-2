@@ -9,8 +9,6 @@ from .forms import NewPageForm, EditPageForm
 
 
 def index(request):
-    """Main page."""
-
     context = {
         "entries": util.list_entries()
     }
@@ -19,8 +17,6 @@ def index(request):
 
 
 def entry_page(request, entry_name):
-    """Render entry page."""
-
     # convert markdown to html
     ef_content = util.get_entry(entry_name)
     if ef_content:
@@ -36,8 +32,6 @@ def entry_page(request, entry_name):
 
 
 def search(request):
-    """Search form."""
-
     keyword = request.GET['keyword']
     if keyword in util.list_entries():
         return redirect('entry_page', entry_name=keyword)
@@ -58,7 +52,6 @@ def random_page(request):
 
 
 def new_page(request):
-
     if request.method == 'POST':
         form = NewPageForm(request.POST)
 
@@ -78,7 +71,6 @@ def new_page(request):
 
 
 def edit_page(request, entry_name):
-
     if request.method == 'POST':
         form = EditPageForm(request.POST)
 
